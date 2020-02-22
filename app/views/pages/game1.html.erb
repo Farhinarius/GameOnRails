@@ -1,0 +1,13 @@
+<%#   <%= javascript_include_tag "customjsFile", "data-turbolinks-track" => true  %>
+<%#  <%= image_tag 'flappy_bird/background.png' %>
+
+<div class="container mx-auto">
+    <div class="text-center">
+        <h1 id="text">Welcome to the Game</h1> <br/>
+        <canvas id="canvas" width="288" height="512"></canvas> <br>
+
+        <a type="button" class="btn btn-success"  href="#">Restart game</a> 
+        <button type="button" class="btn btn-danger" onclick="clearInterval(myTime)">Stop game</button>
+    </div>
+    <%= link_to "Come back", "/" %>
+<hr>

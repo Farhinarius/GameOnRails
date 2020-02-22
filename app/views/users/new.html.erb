@@ -1,0 +1,38 @@
+<%= form_for :user, url: '/users' do |f| %>
+  <div class="container">
+    <form class="form-signin">
+      <div class="text-center">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      </div>  
+
+      <div class="form-group">
+        <label for="user_name">Username</label>
+        <input type="name" name="user[username]" id="user_name" class="form-control" placeholder="Enter Username" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="user_email">Email address</label>
+        <input type="email" name="user[email]" id="user_email" class="form-control" placeholder="Enter Email" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="user_password">Password</label>
+        <input type="password" name="user[password]" id="user_password"class="form-control" placeholder="Password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="user_password">Confirm Password</label>
+        <input type="password" name="user[password_confirmation]" id="user_password_confirmation" class="form-control" placeholder="Password" required>
+      </div>
+            
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+      <p class="mt-5 mb-3 text-muted">@All rights reserved@</p>
+    </form>
+  </div>
+<% end %>
+
+
+  <%# name="user[email]" id="user_email" %>
+  <%# id = "nputEmail" %>

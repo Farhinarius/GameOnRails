@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameOnRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag  'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <a class="navbar-brand" href="/">Rails Games</a>
+          <ul class="navbar-nav">
+            <% if current_user %>
+              <li class="nav-item active" style="margin-left: 6;">
+                <span class="navbar-text">
+                  You are logged in as <span style="color: red"><%= current_user.username %> </span>
+                </span>
+              </li>
+
+              <li class="nav-item" style="margin-left: 1150px;">
+                <a class="nav-link" href="/logout">Log out</a>
+              </li>
+
+            <% else  %>
+              <li class="nav-item" style="margin-left: 1280px;">
+                <a class="nav-link" href="/login">Sign in</a>
+              </li>
+
+              <li class="nav-item" style="margin-left: 6px;">
+                <a class="nav-link" href="/signup">Sign up</a>
+              </li>
+            <% end %>
+          </ul>
+    </nav>
+  <%= yield %>
+  </body>
+</html>
